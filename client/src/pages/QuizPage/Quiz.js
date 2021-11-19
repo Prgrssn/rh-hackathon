@@ -41,7 +41,7 @@ export default function Quiz() {
                 <img className="quiz-card__top--icon" src={backArrow} alt="" />
               </div>
               <p className="quiz-card__top--prompt">
-                Earn our first Cryptohood Credit by answering correctly below.
+                Earn your first Cryptohood Credit by answering correctly below.
               </p>
             </div>
             <div className="quiz-card__top--prog-cont">

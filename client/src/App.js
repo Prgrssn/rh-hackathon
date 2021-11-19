@@ -3,7 +3,7 @@ import "./App.scss";
 import Header from "./components/Header";
 import Home from "./pages/HomePage/Home";
 import Quiz from "./pages/QuizPage/Quiz";
-import Success from "./pages/SuccessPage/Success.JS";
+import Success from "./pages/SuccessPage/Success.js";
 
 function App() {
   return (

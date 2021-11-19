@@ -1,4 +1,5 @@
 // mixins
+@use "./variables" as *;
 
 @mixin flexDirection($direction) {
   display: flex;

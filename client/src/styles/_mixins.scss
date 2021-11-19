@@ -1,1 +1,5 @@
 // mixins
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}

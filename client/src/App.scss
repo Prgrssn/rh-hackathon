@@ -1,0 +1,13 @@
+// global styles
+@use "./styles/variables" as *;
+@use "./styles/mixins" as *;
+@use "./styles/typography" as *;
+
+* {
+  font-family: "avenir";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: $purple;
+  color: white;
+}

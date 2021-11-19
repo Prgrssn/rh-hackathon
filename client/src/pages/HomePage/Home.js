@@ -3,8 +3,12 @@ import "./Home.scss";
 
 export default function Home() {
   return (
-    <div>
-      <h1>I am home component</h1>
+    <div className="page">
+      <section className="page__section">
+        <h1 className="page__title">
+          Do you have a fear of trading out? #FOTO
+        </h1>
+      </section>
     </div>
   );
 }

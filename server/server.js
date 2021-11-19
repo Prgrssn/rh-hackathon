@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 PORT = 8080;
 
+app.use(express.json());
+
 API_URL = `http://localhost:${PORT}`;
 
 let quizData = [];

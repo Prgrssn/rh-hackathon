@@ -2,12 +2,14 @@ import "./Quiz.scss";
 import backArrow from "../../assets/icons/Back arrow@2x.png";
 import progressBar from "../../assets/icons/Progress bar inactive@2x.png";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import radioIcon from "../../assets/icons/Radio button empty@2x.png";
 
 const API_URL = "http://localhost:8080/quiz/1";
 
 export default function Quiz() {
+  let navigate = useNavigate();
   const [quiz, setQuiz] = useState(null);
   const [isActive, setActive] = useState(null);
 
@@ -20,6 +22,10 @@ export default function Quiz() {
   const handleButtonClick = (event) => {
     event.preventDefault();
     setActive(!isActive);
+
+    setTimeout(() => {
+      navigate("/success");
+    }, 200);
   };
 
   if (!quiz) return null;

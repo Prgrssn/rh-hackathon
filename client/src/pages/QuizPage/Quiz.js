@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import radioIcon from "../../assets/icons/Radio button empty@2x.png";
+import activeRadio from "../../assets/icons/Radio button green@2x.png";
 
 const API_URL = "http://localhost:8080/quiz/1";
 
@@ -26,6 +27,10 @@ export default function Quiz() {
     setTimeout(() => {
       navigate("/success");
     }, 200);
+  };
+
+  const handleRowSelect = (event) => {
+    setActive(!isActive);
   };
 
   if (!quiz) return null;
@@ -64,7 +69,12 @@ export default function Quiz() {
                       alt=""
                     />
                   </div>
-                  <p className="quiz-card__answers--txt">{answer}</p>
+                  <p
+                    className="quiz-card__answers--txt"
+                    onClick={handleRowSelect}
+                  >
+                    {answer}
+                  </p>
                 </div>
               );
             })}
@@ -79,6 +89,13 @@ export default function Quiz() {
           >
             Submit
           </button>
+          <div className="active-radio__cont">
+            <img
+              src={activeRadio}
+              alt=""
+              className={isActive ? "radio-button__active" : "radio-button"}
+            />
+          </div>
         </section>
       </article>
     </main>

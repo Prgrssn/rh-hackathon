@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "question": "10 years ago, an anonymous Bitcoin user purchased 1000 Bitcoin for $80 total. They sold in 2020, and made enough to buy",
+    "answers": [
+      "A $1 million house",
+      "46 Lamborghinis",
+      "A Super Yacht with a helicopter landing pad"
+    ],
+    "correctAnswer": "46 Lamborghinis"
+  },
+  {
+    "id": "2",
+    "question": "who's got the funk?",
+    "answers": ["I do", "Rick James", "Your mom"],
+    "correctAnswer": "I do"
+  },
+  {
+    "id": "3",
+    "question": "Worst NHL fanbase in the league?",
+    "answers": ["Toronto", "Boston", "Washington"],
+    "correctAnswer": "Toronto"
+  },
+  {
+    "id": "4",
+    "question": "When are you skiing?",
+    "answers": ["Never", "Today", "Tomorrow"],
+    "correctAnswer": "Everyday!"
+  }
+]

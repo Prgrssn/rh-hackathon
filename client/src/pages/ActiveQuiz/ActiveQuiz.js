@@ -1,0 +1,1 @@
+import "./ActivQuiz.scss";

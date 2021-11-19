@@ -23,7 +23,7 @@
 
   &__top {
     position: relative;
-    height: 10rem;
+    height: 9.5rem;
 
     &--prompt-cont {
       flex-direction: row;
@@ -70,6 +70,51 @@
   }
 
   &__bottom {
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  &__question {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 800;
+    margin-left: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__answers {
+    margin: 2rem 0.75rem;
+
+    &--txt {
+      margin-left: 1rem;
+      width: 15rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      font-weight: 400;
+    }
+
+    &--row {
+      display: flex;
+      flex-direction: row;
+      margin: 2.5rem 0;
+    }
+
+    &--radio-cont {
+      width: 1.375rem;
+      height: 1.375rem;
+    }
+
+    &--radio {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    background-color: grey;
+    height: 3.5rem;
+    border-radius: 30px;
+    border: none;
   }
 }

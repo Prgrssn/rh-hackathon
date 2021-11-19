@@ -1,6 +1,10 @@
 import React from "react";
-import "Home.scss";
+import "./Home.scss";
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <h1>I am home component</h1>
+    </div>
+  );
 }

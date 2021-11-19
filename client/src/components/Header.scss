@@ -2,7 +2,20 @@
 @use "../styles/mixins" as *;
 
 .header {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: $purple;
+
+  &__nav {
+    height: 15px;
+  }
+
+  &__logo {
+    height: 74px;
+  }
+  &__profile {
+    height: 20px;
+  }
 }

@@ -1,18 +1,16 @@
 import React from "react";
 import "./Header.scss";
+import nav from "../assets/icons/Hamburger menu@2x.png";
+import logo from "../assets/icons/Logo@2x.png";
+import profile from "../assets/icons/Profile icon@2x.png";
 
 export default function Header() {
   return (
     <header className="header">
-      <aside className="header__nav">
-        <img src="" alt="Navigation" />
-      </aside>
-      <section className="header__title">
-        <img src="" alt="Logo" />
-      </section>
-      <aside className="header__profile">
-        <img src="" alt="Profile" />
-      </aside>
+      <img className="header__nav" src={nav} alt="Navigation" />
+      <img className="header__logo" src={logo} alt="Logo" />
+
+      <img className="header__profile" src={profile} alt="Profile" />
     </header>
   );
 }

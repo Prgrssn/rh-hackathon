@@ -1,6 +1,103 @@
-@use "../../styles/variables";
-@use "../../styles/mixins";
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
-.home {
-  padding: 32px 1rem;
+.page {
+  padding: 0;
+  background-color: $purple;
+
+  &__section1 {
+    padding: 1rem 2rem;
+    background: $purple;
+  }
+
+  &__title {
+    padding-bottom: 16px;
+    font-size: 2rem;
+    line-height: 36px;
+    font-weight: 500;
+  }
+
+  &__paragraph {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 21.86px;
+    width: 318px;
+  }
+
+  &__section2 {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    align-items: center;
+    background: $purple;
+  }
+
+  &__landing {
+    height: 201px;
+  }
+
+  &__p-bold {
+    font-size: 1rem;
+    line-height: 21.86px;
+    font-weight: 800;
+    width: 168px;
+  }
+
+  &__section3 {
+    padding: 36px 1rem;
+    background: $light-purple;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 30px;
+    width: 383px;
+    padding-bottom: 1rem;
+  }
+
+  &__paragraph2 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 21.86px;
+    width: 382px;
+  }
+
+  &__line-container {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    padding-top: 24px;
+  }
+
+  &__bitcoin {
+    height: 28px;
+  }
+
+  &__text1 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    width: 285px;
+    margin-left: 9px;
+  }
+
+  &__line-container2 {
+    display: flex;
+    margin-left: 13px;
+    padding-top: 24px;
+  }
+
+  &__bitcoins {
+    height: 41.5px;
+  }
+
+  &__text2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    width: 303px;
+    margin-left: 8px;
+  }
 }

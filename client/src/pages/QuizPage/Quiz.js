@@ -1,8 +1,24 @@
 import "./Quiz.scss";
 import backArrow from "../../assets/icons/Back arrow@2x.png";
 import progressBar from "../../assets/icons/Progress bar inactive@2x.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Quiz() {
+  const { answers, setAnswers } = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/quiz/1")
+      .then((res) => {
+        setAnswers(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, [setAnswers]);
+
+  if (!answers) return null;
+
   return (
     <main className="quiz">
       <article className="quiz-card">

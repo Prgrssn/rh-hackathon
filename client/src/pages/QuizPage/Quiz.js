@@ -8,19 +8,22 @@ import radioIcon from "../../assets/icons/Radio button empty@2x.png";
 const API_URL = "http://localhost:8080/quiz/1";
 
 export default function Quiz() {
-  // const [quiz, setQuiz] = useState(null);
+  const [quiz, setQuiz] = useState(null);
+  const [isActive, setActive] = useState(null);
 
-  // useEffect(() => {
-  //   axios.get(API_URL).then((res) => {
-  //     setQuiz(res.data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.get(API_URL).then((response) => {
+      setQuiz(response.data);
+    });
+  }, []);
 
-  // console.log(quiz);
-
-  const handleClick = (event) => {
+  const handleButtonClick = (event) => {
     event.preventDefault();
+    setActive(!isActive);
   };
+
+  if (!quiz) return null;
+  console.log(quiz);
 
   return (
     <main className="quiz">
@@ -42,47 +45,32 @@ export default function Quiz() {
         </header>
         <section className="quiz-card__bottom">
           <h4 className="quiz-card__question">
-            10 years ago, an anonymous Bitcoin user purchased 1000 Bitcoin for
-            $80 total. They sold in 2020, and made enough money to
-            buy_________________.
+            {quiz.question}_________________.
           </h4>
           <div className="quiz-card__answers">
-            <div className="quiz-card__answers--row">
-              <div className="quiz-card__answers--radio-cont">
-                <img
-                  className="quiz-card__answers--radio"
-                  src={radioIcon}
-                  alt=""
-                />
-              </div>
-              <p className="quiz-card__answers--txt">A $1 Million house</p>
-            </div>
-            <div className="quiz-card__answers--row">
-              <div className="quiz-card__answers--radio-cont">
-                <img
-                  className="quiz-card__answers--radio"
-                  src={radioIcon}
-                  alt=""
-                />
-              </div>
-              <p className="quiz-card__answers--txt">46 Lamborghinis</p>
-            </div>
-            <div className="quiz-card__answers--row">
-              <div className="quiz-card__answers--radio-cont">
-                <img
-                  className="quiz-card__answers--radio"
-                  alt=""
-                  src={radioIcon}
-                />
-              </div>
-              <p className="quiz-card__answers--txt">
-                A Super Yacht with a helicopter landing pad
-              </p>
-            </div>
+            {quiz.answers.map((answer) => {
+              return (
+                <div className="quiz-card__answers--row" key={answer}>
+                  <div className="quiz-card__answers--radio-cont">
+                    <img
+                      className="quiz-card__answers--radio"
+                      src={radioIcon}
+                      alt=""
+                    />
+                  </div>
+                  <p className="quiz-card__answers--txt">{answer}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
         <section className="quiz-card__bottom">
-          <button className="quiz-card__button" onClick={handleClick}>
+          <button
+            className={
+              isActive ? "quiz-card__button--active" : "quiz-card__button"
+            }
+            onClick={handleButtonClick}
+          >
             Submit
           </button>
         </section>

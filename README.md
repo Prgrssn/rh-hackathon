@@ -8,7 +8,7 @@ We were a cross-functional team made up of 4 UX Designers, 2 Web Developers and 
 
 Users watch a video educating them about different crypto terms or technologies and the user answers questions about the video they just watched in order to receive credits that go towards investing into different tokens on Robinhood's platform.
 
-[Checkout our Presentation Slide Deck!] (https://www.canva.com/design/DAEwHle1cVg/70Ygil5hl14EcjDQzqAXBQ/view?utm_campaign=designshare&utm_content=DAEwHle1cVg&utm_medium=link&utm_source=homepage_design_menu)
+[Checkout our Presentation Slide Deck!](https://www.canva.com/design/DAEwHle1cVg/70Ygil5hl14EcjDQzqAXBQ/view?utm_campaign=designshare&utm_content=DAEwHle1cVg&utm_medium=link&utm_source=homepage_design_menu)
 
 
 
